@@ -1,0 +1,35 @@
+<h1>Countries</h1>
+
+<div>
+capital-  <input type="text" #capital class="form-control">
+
+  <button type="button" (click)="getCountry(capital.value)" class="btn btn-primary">Get country</button>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Capital</th>
+      <th>Region</th>
+    </tr>
+    <tr>
+      <td>{{country.name}}</td>
+      <td>{{country.capital}}</td>
+      <td>{{country.region}}</td>
+    </tr>
+  </table>
+</div>
+
+
+
+
+<table id="country">
+  <tr>
+    <th>Name</th>
+    <th>Capital</th>
+    <th>Region</th>
+  </tr>
+  <tr *ngFor="let item of countries">
+    <td>{{item.name}}</td>
+    <td>{{item.capital}}</td>
+    <td>{{item.region}}</td>
+  </tr>
+</table>

@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <StartupObject>Paymentsense.Coding.Challenge.Api.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PaymentSense.BusinessLayer\PaymentSense.BusinessLayer.csproj" />
+    <ProjectReference Include="..\PaymentSense.DataLayer\PaymentSense.DataLayer.csproj" />
+    <ProjectReference Include="..\PaymentSense.Mappers\PaymentSense.Mappers.csproj" />
+    <ProjectReference Include="..\PaymentSense.Models.ServicesClient\PaymentSense.Models.ServicesClient.csproj" />
+  </ItemGroup>
+
+</Project>
